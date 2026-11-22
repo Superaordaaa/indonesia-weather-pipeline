@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_weather_daily
+    description: Typed and cleaned daily weather, one row per city per day.
+    columns:
+      - name: city
+        tests: [not_null]
+      - name: day
+        tests: [not_null]
+      - name: precipitation_mm
+        tests: [not_null]

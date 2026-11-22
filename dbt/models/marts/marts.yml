@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fct_city_weather_daily
+    description: Daily weather per city with rain categories.
+    columns:
+      - name: rain_category
+        tests:
+          - accepted_values:
+              values: ["dry", "light rain", "moderate rain", "heavy rain"]
+  - name: city_weather_summary
+    description: Per-city summary over the loaded window.
+    columns:
+      - name: city
+        tests: [unique, not_null]
